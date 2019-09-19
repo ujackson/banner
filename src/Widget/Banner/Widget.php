@@ -4,6 +4,7 @@ namespace AvoRed\Banner\Widget\Banner;
 
 use AvoRed\Framework\Support\Contracts\WidgetInterface;
 use AvoRed\Banner\Models\Database\Banner;
+use AvoRed\Banner\ViewModels\BannerWidgetViewModel;
 
 class Widget implements WidgetInterface
 {
@@ -73,12 +74,11 @@ class Widget implements WidgetInterface
      */
     public function with()
     {
-        return [];
+        return new BannerWidgetViewModel;
     }
 
     public function render()
     {
-        //$banners = Banner::whereStatus('ENABLED')->orderBy('sort_order', 'asc')->get();
-        return view($this->view()); //->with('banners', $banners);
+        return view($this->view(), $this->with());
     }
 }
