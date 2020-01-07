@@ -2,10 +2,10 @@
 
 namespace AvoRed\Banner;
 
+use AvoRed\Banner\Models\Contracts\BannerInterface;
+use AvoRed\Banner\Models\Repository\BannerRepository;
 use Illuminate\Support\ServiceProvider;
 use AvoRed\Banner\Widget\Banner\Widget as BannerWidget;
-use AvoRed\Banner\Models\Repository\BannerRepository;
-use AvoRed\Banner\Models\Contracts\BannerInterface;
 use AvoRed\Framework\Menu\MenuItem;
 use AvoRed\Framework\Support\Facades\Menu;
 use AvoRed\Framework\Support\Facades\Widget;

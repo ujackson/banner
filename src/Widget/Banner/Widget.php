@@ -78,7 +78,7 @@ class Widget implements WidgetInterface
 
     public function render()
     {
-        //$banners = Banner::whereStatus('ENABLED')->orderBy('sort_order', 'asc')->get();
-        return view($this->view()); //->with('banners', $banners);
+        $banners = Banner::whereStatus('ENABLED')->orderBy('sort_order', 'asc')->get();
+        return view($this->view())->with('banners', $banners);
     }
 }
