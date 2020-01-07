@@ -1,5 +1,5 @@
 <div>
-    <a-carousel class="carousel" vertical>
+    <a-carousel class="carousel" autoplay effect="fade">
         @foreach ($banners as $banner)
             <div class="banner-{{ $banner->id }}">
                 <a href="{{ asset($banner->url) }}">
